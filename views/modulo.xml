@@ -1,0 +1,24 @@
+<odoo>
+  <data>
+      <record model="ir.actions.act_window" id="modulo_list_action">
+          <field name="name">modulo odoo_examen_prueba2, modelo modulo</field>
+          <field name="res_model">odoo_examen_prueba2.modulo</field>
+          <field name="view_mode">list,form</field>
+          <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face"> Tes que crear o 1º Rexistro </p>
+          </field>
+      </record>
+
+      <record model="ir.ui.view" id="modulo_list_view">
+          <field name="name">odoo_examen_prueba2.list</field>
+          <field name="model">odoo_examen_prueba2.modulo</field>
+          <field name="arch" type="xml">
+              <list editable="top" create="1" edit="1">
+                  <field name="name"/>
+                  <field name="descripcion"/>
+              </list>
+          </field>
+      </record>
+
+  </data>
+</odoo>

@@ -1,0 +1,33 @@
+<odoo>
+  <data>
+      <record model="ir.actions.act_window" id="nota_list_action">
+          <field name="name">modulo odoo_examen_prueba2, modelo nota</field>
+          <field name="res_model">odoo_examen_prueba2.nota</field>
+          <field name="view_mode">list,form</field>
+          <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face"> Tes que crear o 1º Rexistro </p>
+          </field>
+      </record>
+
+      <record model="ir.ui.view" id="nota_list_view">
+          <field name="name">odoo_examen_prueba2.list</field>
+          <field name="model">odoo_examen_prueba2.nota</field>
+          <field name="arch" type="xml">
+              <list editable="top" create="1" edit="1"
+                    decoration-danger="nota &lt; 5"
+                    decoration-warning="nota &gt;= 4 and nota &lt;= 7"
+                    decoration-muted="nota &gt;= 6 and nota &lt;=9"
+                    decoration-success="nota &gt; 8">
+                  <field name="ano_academico"/>
+                  <field name="ciclo"/>
+                  <field name="quenda"/>
+                  <field name="curso"/>
+                  <field name="modulo"/>
+                  <field name="nota"/>
+                  <field name="nota_texto"/>
+              </list>
+          </field>
+      </record>
+
+  </data>
+</odoo>

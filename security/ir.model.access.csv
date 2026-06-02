@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+odoo_examen_prueba2_modulo,odoo_examen_prueba2.modulo,model_odoo_examen_prueba2_modulo,base.group_user,1,1,1,1
+odoo_examen_prueba2_curso,odoo_examen_prueba2.curso,model_odoo_examen_prueba2_curso,base.group_user,1,1,1,1
+odoo_examen_prueba2_ciclo,odoo_examen_prueba2.ciclo,model_odoo_examen_prueba2_ciclo,base.group_user,1,1,1,1
+odoo_examen_prueba2_nota,odoo_examen_prueba2.nota,model_odoo_examen_prueba2_nota,base.group_user,1,1,1,1

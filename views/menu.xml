@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <menuitem name="Christian Gabriel Diacich Mancilla" id ="main_odoo_examen2" sequence="5"/>
+        <menuitem name="Exame" id="nivel1_exame" parent="main_odoo_examen2"/>
+        <menuitem name="Cursos Académicos" id="nivel2_curso" parent="nivel1_exame" action="curso_list_action"/>
+        <menuitem name="Ciclos" id="nivel2_ciclo" parent="nivel1_exame" action="ciclo_list_action"/>
+        <menuitem name="Módulos" id="nivel2_modulo" parent="nivel1_exame" action="modulo_list_action"/>
+        <menuitem name="Notas" id="nivel2_notas" parent="nivel1_exame" action="nota_list_action"/>
+    </data>
+</odoo>
