@@ -15,7 +15,7 @@ class nota(models.Model):
     modulo = fields.Many2one("odoo_examen_prueba2.modulo", string="Módulo")
         #fields.Char(string="Módulo")) #RELACION
     nota = fields.Integer(string="Nota")
-    nota_texto = fields.Text(string="Nota Texto")
+    nota_texto = fields.Char(compute="_calcular_nota_texto", string="Nota Texto")
 
     @api.depends('nota')
     def _calcular_nota_texto(self):

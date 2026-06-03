@@ -28,6 +28,8 @@ Long description of module's purpose
         'views/modulo.xml',
         'views/nota.xml',
         'views/templates.xml',
+        'reports/report_nota.xml',
+#        'reports/report_header.xml',
         'views/menu.xml',
         'security/ir.model.access.csv',
     ],

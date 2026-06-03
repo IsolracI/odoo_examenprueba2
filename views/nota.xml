@@ -3,7 +3,7 @@
       <record model="ir.actions.act_window" id="nota_list_action">
           <field name="name">modulo odoo_examen_prueba2, modelo nota</field>
           <field name="res_model">odoo_examen_prueba2.nota</field>
-          <field name="view_mode">list,form</field>
+          <field name="view_mode">list,form,graph</field>
           <field name="help" type="html">
               <p class="o_view_nocontent_smiling_face"> Tes que crear o 1º Rexistro </p>
           </field>
@@ -14,10 +14,10 @@
           <field name="model">odoo_examen_prueba2.nota</field>
           <field name="arch" type="xml">
               <list editable="top" create="1" edit="1"
-                    decoration-danger="nota &lt; 5"
-                    decoration-warning="nota &gt;= 4 and nota &lt;= 7"
-                    decoration-muted="nota &gt;= 6 and nota &lt;=9"
-                    decoration-success="nota &gt; 8">
+                    decoration-danger="nota &lt;= 4"
+                    decoration-warning="nota == 5 or nota == 6"
+                    decoration-muted="nota == 7 or nota == 8"
+                    decoration-success="nota &gt;= 9">
                   <field name="ano_academico"/>
                   <field name="ciclo"/>
                   <field name="quenda"/>
@@ -27,6 +27,64 @@
                   <field name="nota_texto"/>
               </list>
           </field>
+      </record>
+
+      <record model="ir.ui.view" id="iautenticacions_graph_view">
+          <field name="name">nota.grafico</field>
+          <field name="model">odoo_examen_prueba2.nota</field>
+          <field name="arch" type="xml">
+              <graph string="Número" type="bar">
+                  <field name="nota" type="row"/>
+              </graph>
+          </field>
+      </record>
+
+      <record model="ir.filters" id="agrupamiento1">
+          <field name="name">Agrupar notas por ciclo</field>
+          <field name="model_id">odoo_examen_prueba2.nota</field>
+          <field name="context">{'group_by': ['ciclo']}</field>
+          <field name="is_default">false</field>
+          <field name="active">true</field>
+          <field name="sort">[]</field>
+          <field name="domain">[]</field>
+          <field name="user_id"></field>
+          <field name="action_id" eval="ref('odoo_examenprueba2.nota_list_action')"/>
+      </record>
+
+      <record model="ir.filters" id="agrupamiento2">
+          <field name="name">Agrupar por Módulo</field>
+          <field name="model_id">odoo_examen_prueba2.nota</field>
+          <field name="context">{'group_by': ['modulo']}</field>
+          <field name="is_default">false</field>
+          <field name="active">true</field>
+          <field name="sort">[]</field>
+          <field name="domain">[]</field>
+          <field name="user_id"></field>
+          <field name="action_id" eval="ref('odoo_examenprueba2.nota_list_action')"/>
+      </record>
+
+      <record model="ir.filters" id="filtro1">
+          <field name="name">Filtro SXE do 24-25 ou Vespertino do 23-24</field>
+          <field name="model_id">odoo_examen_prueba2.nota</field>
+          <field name="context">{}</field>
+          <field name="is_default">false</field>
+          <field name="active">true</field>
+          <field name="sort">[]</field>
+          <field name="domain">['|','&amp;',('ano_academico.ano_curso','=','24-25'),('modulo.name','=','SXE'),'&amp;',('ano_academico.ano_curso','=','23-24'),('quenda','=','vespertino')]</field>
+          <field name="user_id"></field>
+          <field name="action_id" eval="ref('odoo_examenprueba2.nota_list_action')"/>
+      </record>
+
+      <record model="ir.filters" id="filtro2">
+          <field name="name">Ciclo = DAM</field>
+          <field name="model_id">odoo_examen_prueba2.nota</field>
+          <field name="context">{}</field>
+          <field name="is_default">false</field>
+          <field name="active">true</field>
+          <field name="sort">[]</field>
+          <field name="domain">[('ciclo.ciclo','=','DAM')]</field>
+          <field name="user_id"></field>
+          <field name="action_id" eval="ref('odoo_examenprueba2.nota_list_action')"/>
       </record>
 
   </data>
