@@ -73,7 +73,7 @@
                                     <t t-if="o.nota &gt;= 5">
                                         <t t-set="aprobados" t-value="aprobados + 1"/>
                                     </t>
-                                    <t t-else="o.nota &lt;= 4">
+                                    <t t-else="">
                                         <t t-set="suspensos" t-value="suspensos + 1"/>
                                     </t>
                                 </td>
