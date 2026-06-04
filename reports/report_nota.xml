@@ -107,8 +107,8 @@
         <field name="name">Listaxe de Notas</field>
         <field name="model">odoo_examen_prueba2.nota</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">odoo_examenprueba2.report_nota_template</field>
-        <field name="report_file">odoo_examenprueba2.report_nota_template</field>
+        <field name="report_name">odoo_examen_prueba2.report_nota_template</field>
+        <field name="report_file">odoo_examen_prueba2.report_nota_template</field>
         <!--        <field name="print_report_name">'Registration Event - %s' % (object.name or 'Attendee').replace('/','')</field>-->
         <field name="paperformat_id" ref="paperformat_euro_portrait"/>
         <field name="binding_model_id" ref="model_odoo_examen_prueba2_nota"/>

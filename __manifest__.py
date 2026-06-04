@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 {
     'name': "odoo_examenPrueba2",
 
@@ -28,8 +27,8 @@ Long description of module's purpose
         'views/modulo.xml',
         'views/nota.xml',
         'views/templates.xml',
-        'reports/report_nota.xml',
 #        'reports/report_header.xml',
+        'reports/report_nota.xml',
         'views/menu.xml',
         'security/ir.model.access.csv',
     ],
@@ -38,3 +37,4 @@ Long description of module's purpose
         'demo/demo.xml',
     ],
 }
+

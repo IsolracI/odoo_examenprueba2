@@ -48,7 +48,7 @@
           <field name="sort">[]</field>
           <field name="domain">[]</field>
           <field name="user_id"></field>
-          <field name="action_id" eval="ref('odoo_examenprueba2.nota_list_action')"/>
+          <field name="action_id" eval="ref('odoo_examen_prueba2.nota_list_action')"/>
       </record>
 
       <record model="ir.filters" id="agrupamiento2">
@@ -60,7 +60,7 @@
           <field name="sort">[]</field>
           <field name="domain">[]</field>
           <field name="user_id"></field>
-          <field name="action_id" eval="ref('odoo_examenprueba2.nota_list_action')"/>
+          <field name="action_id" eval="ref('odoo_examen_prueba2.nota_list_action')"/>
       </record>
 
       <record model="ir.filters" id="filtro1">
@@ -72,7 +72,7 @@
           <field name="sort">[]</field>
           <field name="domain">['|','&amp;',('ano_academico.ano_curso','=','24-25'),('modulo.name','=','SXE'),'&amp;',('ano_academico.ano_curso','=','23-24'),('quenda','=','vespertino')]</field>
           <field name="user_id"></field>
-          <field name="action_id" eval="ref('odoo_examenprueba2.nota_list_action')"/>
+          <field name="action_id" eval="ref('odoo_examen_prueba2.nota_list_action')"/>
       </record>
 
       <record model="ir.filters" id="filtro2">
@@ -84,7 +84,7 @@
           <field name="sort">[]</field>
           <field name="domain">[('ciclo.ciclo','=','DAM')]</field>
           <field name="user_id"></field>
-          <field name="action_id" eval="ref('odoo_examenprueba2.nota_list_action')"/>
+          <field name="action_id" eval="ref('odoo_examen_prueba2.nota_list_action')"/>
       </record>
 
   </data>
